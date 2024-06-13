@@ -240,4 +240,39 @@ html{
     border-style: inset;
   }
   
+  /* Product Page */
+.card-body{
+  width: 250px;
+  height: 180px;
   
+}
+.card{
+  height: fit-content;
+  padding: 100px;
+  margin-top: 30px;
+  box-shadow: 0 0 10px 0 #000;
+}
+
+#product h2{
+  margin-left: 40%;
+  font-weight: 400;
+  font-size: 60px;
+  padding-bottom: 60px;
+}
+#product{
+
+  background-color: #54504c;
+}
+
+
+/* checkout page */
+#checkout{
+  background-color: #54504c;
+  height: 100vh;
+}
+#checkout h2{
+  margin-left: 40%;
+  font-weight: 400;
+  font-size: 60px;
+  padding-bottom: 30px;
+}

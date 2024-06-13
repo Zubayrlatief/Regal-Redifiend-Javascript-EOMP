@@ -61,6 +61,29 @@
         </div>
     </nav>
     
+    <main class="container-fluid" id="checkout" data-checkout>
+        <h2>CHECKOUT</h2>
+        <div class="row container-fluid">
+          <div class="col">
+            <table class="table table-bordered table-responsive">
+              <thead class="table-group-divider">
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Amount</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider" table-checkout></tbody>
+              <tfoot class="table-group-divider">
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <a class="btn btn-secondary" id="clear">Clear Items</a>
+        <a class="btn btn-secondary" id="pay">Pay Now</a>
+      </main>
+
     <footer id="footer" class="container-fluid position-relative">
         <div class="rowFooter">
             <p class="lead text-start ">REGAL REDIFINED &copy; 
