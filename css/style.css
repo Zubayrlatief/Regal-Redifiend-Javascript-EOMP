@@ -1,0 +1,243 @@
+*{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 585;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    font-size: 19px;
+   
+}
+
+html{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 585;
+    font-style: normal;
+    scroll-behavior: smooth;
+    background-color: #54504c;
+   
+}
+
+.navbar{
+ background-color: #54504c;
+}
+
+.logo{
+    width: 70px;
+    height: 65px;
+}
+
+.cart{
+    width: 25px;
+    height: 45%;
+    background-color: #ad9370;
+}
+
+.nav-item{
+    margin-left: 10px;
+}
+
+.nav-item2{
+    margin-left: 400px;
+}
+
+.nav-item3{
+    margin-left: 20px;
+}
+
+.shopping-cart {
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.shopping-cart:hover {
+    color: #007BFF;
+}
+
+.form-control{
+     block-size: 35px;
+     height: fit-content;
+     width: 225px;
+}
+
+#footer{
+    background-color: #54504c;
+    font-size: small;
+    padding-top: 15px;
+    padding-left: 40%;
+}
+
+/* landing page */
+
+.landingimg{
+    background-image: url("https://iili.io/JyeKCWx.md.jpg");
+    margin: 0;
+    padding: 0;
+    height: 500px;
+    width: 100%;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+  }
+  
+  .btn2 {
+    margin-left: 300px;
+    margin-top: 250px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fefefe;
+    text-transform: uppercase;
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  
+  .btn2::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - -2px);
+    background-color: #212121;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+  }
+  
+  .btn2::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - 50px);
+    background-color: #212121;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+  }
+  
+  .btn2:hover::before {
+    transform: translateY(-25px);
+    height: 0;
+  }
+  
+  .btn2:hover::after {
+    transform: scaleX(0);
+    transition-delay: 0.15s;
+  }
+  
+  .btn2:hover {
+    border: 2px solid #fefefe;
+  }
+  
+  .btn2 span {
+    position: relative;
+    z-index: 3;
+  }
+  
+  button {
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .btn3 {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fefefe;
+    text-transform: uppercase;
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  
+  .btn3::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - -2px);
+    background-color: #212121;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+  }
+  
+  .btn3::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - 50px);
+    background-color: #212121;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+  }
+  
+  .btn3:hover::before {
+    transform: translateY(-25px);
+    height: 0;
+  }
+  
+  .btn3:hover::after {
+    transform: scaleX(0);
+    transition-delay: 0.15s;
+  }
+  
+  .btn3:hover {
+    border: 2px solid #fefefe;
+  }
+  
+  .btn3 span {
+    position: relative;
+    z-index: 3;
+  }
+  
+  button {
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  /* about */
+.background-img-about{
+    background-color: #54504c;
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+    height: 480px;
+    border-style: outset;
+  }
+  
+  .img-inabout{
+    border: #54504c;
+    float: left;
+    margin-left: 28px;
+    margin-top: 5px;
+    width: 300px;
+    height: 320px;
+    border-style: outset;
+  }
+  
+  .text-about{
+    border-color: #54504c;
+    margin-right: 20px;
+    margin-top: 30px;
+    font-weight: 300;
+    margin-left: 350px;
+    border-style: inset;
+  }
+  
+  
