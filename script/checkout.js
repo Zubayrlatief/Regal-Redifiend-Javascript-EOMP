@@ -16,7 +16,7 @@ function cartItems(){
                 <td>${eval(`${cartProducts[i][0].amount} * ${cartProducts[i].length}`)}</td>
             </tr>
          `
-        }
+    }
     }catch(e){
         checkoutTable.innerHTML = "Add items to your cart"
     }

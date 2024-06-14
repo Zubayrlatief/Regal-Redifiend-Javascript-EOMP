@@ -2,36 +2,129 @@
 document.querySelector('#currYear').textContent = new Date().getFullYear()
 
 
-function addSubmit(){
-    localStorage.setItem('dedSec',JSON.stringify(prodClothes));
-    let wrench = JSON.parse(localStorage.getItem('dedSec'));
-};
-let dedSec = [];
-function AddProd(id,name,price,description,url){
-    this.id = id,
-    this.name = name,
-    this.description = description,
-    this.price = price,
-    this.url = url
+let tableContent = document.querySelector('[table-products]')
+
+let products = JSON.parse(localStorage.getItem('products')) || []
+document.querySelector('[admin-add-product]')
+
+let sortedProducts = document.getElementById('adminSortProduct')
+
+function adminContent(args){
+    try{
+    tableContent.innerHTML = " "
+        args?.forEach((product, i)=>{
+            tableContent.innerHTML +=`
+            <tr>
+                <td>${product.name}</td>
+                <td>${product.detail}</td>
+                <td><img src="${product.image}" alt="${product.id}" class="img-thumbnail h-25 w-25"></td>
+                <td>R${product.amount}</td>
+                <td> 
+                <div>
+                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#updateProduct${product.id}"><i class="bi bi-pencil-fill"></i></button>
+                    <button class="btn btn-secondary" onclick="deleteProduct(${JSON.stringify(i)})"><i class="bi bi-trash"></i></button>
+                    <div class="modal fade" id="updateProduct${product.id}" tabindex="-1" aria-labelledby="updateProduct${product.id}" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="updateProduct${product.id}">UPDATE</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">CLOSE</button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                          <div class="container">
+                          <input class="form-control m-2" type="text" placeholder="Enter a Product Name" value="${product.name}" name ="admin-name" id="admin-name${product.id}" required>
+                          <input class="form-control m-2" type="text" placeholder="Enter Image URL" value="${product.image}" name="admin-image" id="admin-image${product.id}" required>
+                          <textarea class="form-control m-2" placeholder="Enter your Product details" required name="admin-details" id="admin-details${product.id}">${product.detail}</textarea>
+                          <input class="form-control m-2" type="number" placeholder="Enter the Product Amount" value="${product.amount}" name="admin-amount" id="admin-amount${product.id}" required>
+                          </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                          <button type="button" class="btn btn-secondary"
+                            onclick='new UpdateProduct(${product}, ${i})'>SAVE CHANGES</button>
+                        </div>
+                      </div>
+                        </div> 
+                    </div>
+                </div>
+                </td>
+            </tr>
+            `
+        })
+    }catch(e){
+        tableContent.innerHTML = `
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+         <p>No Products Found</p>
+        </div>
+       </div>
+        `
+    }
 }
-let prod1 = new AddProd(1,'Wrench Mask','Digital display of emotions in a mask form',666,'https://i.postimg.cc/sDFFpdKY/712v95-Jh-WPL-AC-UY780.jpg')
-// let prod2 = new AddProd(2,'','',,'')
-// let prod3 = new AddProd(3,'','',,'')
-// let prod4 = new AddProd(4,'','',,'')
-// let prod5 = new AddProd(5,'','',,'')
-prodClothes.push(prod1,prod2,prod3,prod4,prod5);
-function deLaMap(){
-    let clothing = dedSec.map(function(object,index){
-        return `
-        <tr>
-            <td>${object.id}</td>
-            <td>${object.name}</td>
-            <td>${object.price}</td>
-            <td>${object.description}</td>
-            <td><ing src="${object.url}"></img></td>
-        </tr>
-        `  
-    })
+adminContent(products)
+//for editing
+function UpdateProduct(item, index){
+    try{
+        this.id = item.id;
+        this.name = document.querySelector(`#admin-name${item.id}`).value;
+        this.detail = document.querySelector(`#admin-detail${item.id}`);
+        this.amount = document.querySelector(`#admin-image${item.id}`).value;
+        this.image = document.querySelector(`#admin${item.id}`).value;
+
+        products[index] = Object.assign({}, this);
+        localStorage.setItem('products',JSON.stringify(products));
+        adminContent(products);
+        location.reload();
+    }catch(e){
+        alert('Unable to Edit the Products')
+    }
 }
-table.innerHTML = clothing.join('')
-table.innerHTML = clothing.join('')
+
+//this deletes my products on the website
+function deleteProduct(index){
+    try{
+        products.splice(index, 1)
+        localStorage.setItem('products', JSON.stringify(products))
+        adminContent(products);
+        location.reload()
+    }catch(e){
+        alert('Unable to Delete')
+    }
+}
+
+//sorts products from new to old and old to new
+let highest = false;
+sortedProducts.addEventListener('click', () => {
+    try{
+        if(!highest) {
+            products.sort((a, b) => b.id - a.id);
+            highest = true;
+        }else{
+            products.sort((a, b) => a.id - b.id);
+
+            highest = false;
+        }
+        adminContent(products)
+    }catch(e){
+        alert('This Function is under maintainance')
+    }
+});
+
+//lets me add new product
+let adminSavedProduct = document.getElementById('saveProduct')
+adminSavedProduct.addEventListener('click', () => {
+    try{
+        products.push({
+            name: document.querySelector('#addName').value,
+            detail: document.querySelector('#addDetail').value,
+            amount: document.querySelector('#addAmount').value,
+            image: document.querySelector('#addImage').value,
+        });
+        localStorage.setItem('products', JSON.stringify(products));
+        adminContent(products);
+    }catch(e){
+        alert('Unable to Add new product')
+    }
+})
