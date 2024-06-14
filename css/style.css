@@ -241,10 +241,19 @@ html{
   }
   
   /* Product Page */
+
+  .col-search{
+    margin-left: 41%;
+  }
+
+.card-title ,.card-text{
+  justify-content: center;
+  
+  text-align: center;
+}
 .card-body{
   width: 250px;
   height: 180px;
-  
 }
 .card{
   height: fit-content;
@@ -253,14 +262,22 @@ html{
   box-shadow: 0 0 10px 0 #000;
 }
 
+.card-img-top{
+  object-fit: fill;
+
+}
+
 #product h2{
-  margin-left: 40%;
+  margin-left: 37%;
   font-weight: 400;
   font-size: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
+}
+
+#cart{
+ margin-left: 40px;
 }
 #product{
-
   background-color: #54504c;
 }
 
