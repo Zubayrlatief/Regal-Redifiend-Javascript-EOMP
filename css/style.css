@@ -84,7 +84,7 @@ html{
   }
   
   .btn2 {
-    margin-left: 300px;
+    margin-left: 450px;
     margin-top: 250px;
     justify-content: center;
     align-items: center;
@@ -242,9 +242,9 @@ html{
   
   /* Product Page */
 
-  .col-search{
-    margin-left: 41%;
-  }
+  /* .col-search{
+   
+  } */
 
 .card-title ,.card-text{
   justify-content: center;
@@ -268,7 +268,7 @@ html{
 }
 
 #product h2{
-  margin-left: 37%;
+  margin-left: 33%;
   font-weight: 400;
   font-size: 60px;
   padding-bottom: 20px;
@@ -299,6 +299,20 @@ html{
   align-items: center;
 }
 
+/* admin */
+#admin{
+  background-color: #54504c;
+}
+#admin h2{
+  font-weight: 400;
+  font-size: 60px;
+  padding-bottom: 30px;
+  margin-left: 35%;
+}
+.col{
+   padding-left: 250px;
+}
+
 
 /* contact */
 
@@ -316,59 +330,14 @@ html{
 .colContact{
   flex-basis: 25%;
 }
-.contactForm{
-  border: #000 2px solid;
-  width: max-content;
-}
-.input-field{
-  padding: 5px 10px;
-  margin: 10px 10px;
-  box-shadow: 0 0 5px 0 #000;
-}
-.input-field-textarea-field{
-  box-shadow: 0 0 5px 0 #000;
-  padding: 10px 20px;
-  margin: 10px 10px;
-}
 
-.info{
-   margin-left: 80px;
-   justify-content: center;
-   align-items: center;
-}
-
-.contactForm{
-  height: 500px;
-  width: 700px;
-}
-
-.input-field{
-  size: 0vh;
+.submit{
+  border-color: #000;
+  border-style: double;
 }
 
 #contact h2{
   font-weight: 400;
   font-size: 60px;
   padding-bottom: 30px;
-}
-
-/* Media query for small screens */
-@media (max-width: 600px) {
-  .content {
-      width: 90%;
-  }
-}
-
-/* Media query for medium screens */
-@media (min-width: 601px) and (max-width: 1200px) {
-  .content {
-      width: 70%;
-  }
-}
-
-/* Media query for large screens */
-@media (min-width: 1201px) {
-  .content {
-      width: 50%;
-  }
 }

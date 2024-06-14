@@ -29,19 +29,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="../html/about.html">ABOUT</a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link active dropdown-toggle" href="../html/product.html" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            OUR COLLECTION
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">SUMMER COLLECTION</a></li>
-                            <li><a class="dropdown-item" href="#">WINTER COLLECTION</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="../html/product.html">ALL PRODUCTS</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../html/product.html">OUR COLLECTION</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="../html/checkout.html">CHECKOUT</a>
                     </li>
@@ -52,7 +42,7 @@
                         <a class="nav-link active" href="../html/contact.html">CONTACT US</a>
                     </li>
                     <li class="nav-item3">
-                        <a class="nav-link active" href="../html/admin.html"><i
+                        <a class="nav-link active" href="../html/checkout.html"><i
                                 class="fas fa-shopping-cart shopping-cart"></i></a>
                     </li>
                 </ul>
@@ -63,7 +53,8 @@
     
     <main class="container-fluid" id="admin">
         <div class="row">
-          <h2>Admin</h2>
+          <h2>ADMIN PAGE</h2>
+          <hr>
         </div>
         <div class="row">
           <div class="col">
@@ -76,26 +67,33 @@
             </button>
           </div>
           <!-- Modal -->
-          <div class="modal fade" id="adminAddProduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal fade" id="adminAddProduct" 
+          data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">New Product</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h1 class="modal-title fs-5" 
+                  id="staticBackdropLabel">New Product</h1>
+                  <button type="button" class="btn-close" 
+                  data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                   <form class="form">
                     <div class="container">
-                      <input class="form-control m-2" type="text" placeholder="Enter the Product Name" name="addName" id="addName" required>
-                      <textarea class="form-control m-2" placeholder="Enter the Product Details" name="addDetail" id="addDetail" required></textarea>
-                      <input class="form-control m-2" type="number" placeholder="Enter the Product Amount" name="addAmount" id="addAmount" required >
-                      <input class="form-control m-2" type="url" placeholder="Enter the image's url" name="addImage" id="addImage" required >
+                      <input class="form-control m-2" 
+                      type="text" placeholder="Product Name" name="addName" id="addName" required>
+                      <textarea class="form-control m-2" 
+                      placeholder="Product Details" name="addDetail" id="addDetail" required></textarea>
+                      <input class="form-control m-2" 
+                      type="number" placeholder="Amount" name="addAmount" id="addAmount" required >
+                      <input class="form-control m-2" 
+                      type="url" placeholder="url" name="addImage" id="addImage" required >
                     </div>
                   </form>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-secondary" id="saveProduct">Save Changes</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                  <button type="button" class="btn btn-secondary" id="saveProduct">SAVE</button>
                 </div>
               </div>
             </div>
@@ -106,7 +104,7 @@
             <thead class="table-group-divider">
               <tr>
                 <th>PRODUCTS</th>
-                <th>DDETAILS</th>
+                <th>DETAILS</th>
                 <th>IMAGE</th>
                 <th>AMOUNT</th>
                 <th>ACTION</th>
