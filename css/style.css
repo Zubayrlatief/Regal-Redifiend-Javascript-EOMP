@@ -15,18 +15,18 @@ html{
     font-weight: 585;
     font-style: normal;
     scroll-behavior: smooth;
-    background-color: #54504c;
+    background-color: #252323;
    
+}
+.logo{
+  width: 70px;
+  height: 65px;
 }
 
 .navbar{
  background-color: #54504c;
 }
 
-.logo{
-    width: 70px;
-    height: 65px;
-}
 
 .cart{
     width: 25px;
@@ -70,147 +70,128 @@ html{
     padding-left: 40%;
 }
 
-/* landing page */
+/* Landing page styles */
+.landingimg {
+  background-image: url("https://iili.io/JyeKCWx.md.jpg");
+  margin: 0;
+  padding: 11%;
+  width: 100%;
+  height: 100vh; /* Make the image take the full viewport height */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  text-align: center; /* Ensure buttons are centered */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-.landingimg{
-    background-image: url("https://iili.io/JyeKCWx.md.jpg");
-    margin: 0;
-    padding: 0;
-    height: 500px;
-    width: 100%;
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-  }
-  
-  .btn2 {
-    margin-left: 450px;
-    margin-top: 250px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    border: 2px solid #fefefe;
-    text-transform: uppercase;
-    color: #fefefe;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 20px;
-    transition: 0.3s;
-  }
-  
-  .btn2::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    width: calc(100% + 4px);
-    height: calc(100% - -2px);
-    background-color: #212121;
-    transition: 0.3s ease-out;
-    transform: scaleY(1);
-  }
-  
-  .btn2::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    width: calc(100% + 4px);
-    height: calc(100% - 50px);
-    background-color: #212121;
-    transition: 0.3s ease-out;
-    transform: scaleY(1);
-  }
-  
-  .btn2:hover::before {
-    transform: translateY(-25px);
-    height: 0;
-  }
-  
-  .btn2:hover::after {
-    transform: scaleX(0);
-    transition-delay: 0.15s;
-  }
-  
-  .btn2:hover {
-    border: 2px solid #fefefe;
-  }
-  
-  .btn2 span {
-    position: relative;
-    z-index: 3;
-  }
-  
-  button {
-    text-decoration: none;
-    border: none;
-    background-color: transparent;
-  }
-  
-  .btn3 {
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    border: 2px solid #fefefe;
-    text-transform: uppercase;
-    color: #fefefe;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 20px;
-    transition: 0.3s;
-  }
-  
-  .btn3::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    width: calc(100% + 4px);
-    height: calc(100% - -2px);
-    background-color: #212121;
-    transition: 0.3s ease-out;
-    transform: scaleY(1);
-  }
-  
-  .btn3::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    width: calc(100% + 4px);
-    height: calc(100% - 50px);
-    background-color: #212121;
-    transition: 0.3s ease-out;
-    transform: scaleY(1);
-  }
-  
-  .btn3:hover::before {
-    transform: translateY(-25px);
-    height: 0;
-  }
-  
-  .btn3:hover::after {
-    transform: scaleX(0);
-    transition-delay: 0.15s;
-  }
-  
-  .btn3:hover {
-    border: 2px solid #fefefe;
-  }
-  
-  .btn3 span {
-    position: relative;
-    z-index: 3;
-  }
-  
-  button {
-    text-decoration: none;
-    border: none;
-    background-color: transparent;
+.btn2, .btn3 {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #fefefe;
+  color: #fefefe;
+  background-color: rgba(33, 33, 33, 0.7); /* Add background color for better visibility */
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+  margin: 10px;
+  transition: 0.3s;
+  z-index: 1; /* Make sure the button stays above other elements */
+}
+
+/* Hover animations for buttons */
+.btn2::before, .btn2::after, .btn3::before, .btn3::after {
+  content: '';
+  position: absolute;
+  transition: 0.3s ease-out;
+  width: calc(100% + 4px);
+}
+
+.btn2::before, .btn3::before {
+  top: -2%;
+  left: -2%;
+  height: calc(100% + 4px);
+  transform: scaleY(1);
+}
+
+.btn2::after, .btn3::after {
+  top: -2px;
+  left: -2px;
+  height: calc(100% - 50px);
+  transform: scaleY(1);
+}
+
+.btn2:hover::before, .btn3:hover::before {
+  transform: translateY(-25px);
+  height: 0;
+}
+
+.btn2:hover::after, .btn3:hover::after {
+  transform: scaleX(0);
+  transition-delay: 0.15s;
+}
+
+.btn2:hover, .btn3:hover {
+  border: 2px solid #fefefe;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .landingimg {
+    padding: 8%;
+    height: auto; /* Ensure the image scales down properly on smaller screens */
   }
 
+  .btn2, .btn3 {
+    font-size: 16px;
+    padding: 12px 20px;
+    margin-top: 20px;
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rowFooter {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .landingimg {
+    padding: 5%;
+    height: auto;
+  }
+
+  .btn2, .btn3 {
+    font-size: 14px;
+    padding: 10px 15px;
+    margin-top: 15px;
+    width: 90%;
+  }
+}
+  /* Footer styles for small screens */
+  .rowFooter {
+    text-align: center;
+  }
+
+
+@media (max-width: 480px) {
+  .landingimg {
+    padding: 5%;
+  }
+
+  .btn2, .btn3 {
+    font-size: 14px;
+    padding: 10px 15px;
+    margin-top: 15px;
+    width: 90%;
+  }
+}
   /* about */
 .background-img-about{
     background-color: #54504c;
