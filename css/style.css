@@ -1,5 +1,5 @@
 *{
-    font-family: "Playfair Display", serif;
+    font-family: Bodoni;
     font-optical-sizing: auto;
     font-weight: 585;
     font-style: normal;
@@ -15,7 +15,7 @@ html{
     font-weight: 585;
     font-style: normal;
     scroll-behavior: smooth;
-    background-color: #252323;
+    background-color: #394032;
    
 }
 .logo{
@@ -24,7 +24,7 @@ html{
 }
 
 .navbar{
- background-color: #54504c;
+ background-color:#1E2019;
 }
 
 
@@ -64,7 +64,7 @@ html{
 }
 
 #footer{
-    background-color: #54504c;
+    background-color: #394032;
     font-size: small;
     padding-top: 15px;
     padding-left: 40%;
@@ -192,35 +192,81 @@ html{
     width: 90%;
   }
 }
-  /* about */
-.background-img-about{
-    background-color: #54504c;
-    justify-content: center;
+/* About Page Styles */
+
+.background-img-about {
+  background-color: #394032;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 2px solid #54504c;
+}
+
+.background-img-about h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.img-inabout {
+  border: 5px solid #54504c;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.text-about {
+  border: 3px solid #54504c;
+  background-color: #1E2019;
+  color: #fff;
+  padding: 20px;
+  font-weight: 300;
+  text-align: left;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
     text-align: center;
-    font-weight: bolder;
-    height: 480px;
-    border-style: outset;
   }
-  
-  .img-inabout{
-    border: #54504c;
-    float: left;
-    margin-left: 28px;
-    margin-top: 5px;
-    width: 300px;
-    height: 320px;
-    border-style: outset;
+
+  .img-inabout {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
-  
-  .text-about{
-    border-color: #54504c;
-    margin-right: 20px;
-    margin-top: 30px;
-    font-weight: 300;
-    margin-left: 350px;
-    border-style: inset;
+
+  .text-about {
+    width: 100%;
   }
-  
+}
+
+@media (max-width: 576px) {
+  .img-inabout {
+    max-width: 250px;
+  }
+
+  .text-about {
+    padding: 15px;
+  }
+}
+
   /* Product Page */
 
   /* .col-search{
@@ -259,13 +305,13 @@ html{
  margin-left: 40px;
 }
 #product{
-  background-color: #54504c;
+  background-color: #394032;
 }
 
 
 /* checkout page */
 #checkout{
-  background-color: #54504c;
+  background-color: #394032;
   height: 100vh;
 }
 #checkout h2{
@@ -282,7 +328,7 @@ html{
 
 /* admin */
 #admin{
-  background-color: #54504c;
+  background-color: #394032;
 }
 #admin h2{
   font-weight: 400;
@@ -298,7 +344,7 @@ html{
 /* contact */
 
 #contact{
-  background-color: #54504c;
+  background-color: #394032;
 }
 .rowContact{
   display: flex;
